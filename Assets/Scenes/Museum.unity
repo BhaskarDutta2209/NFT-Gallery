@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.62513834, g: 0.6954415, b: 0.7891659, a: 1}
+  m_IndirectSpecularColor: {r: 0.62363553, g: 0.6938766, b: 0.78748035, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -260,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9359341
+      value: -0.8897057
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalRotation.x
@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.35217518
+      value: -0.45653456
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalRotation.z
@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -318.759
+      value: -305.673
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -871,6 +871,7 @@ GameObject:
   - component: {fileID: 855550449}
   - component: {fileID: 855550448}
   - component: {fileID: 855550452}
+  - component: {fileID: 855550453}
   m_Layer: 0
   m_Name: Painting1
   m_TagString: Untagged
@@ -968,6 +969,19 @@ MonoBehaviour:
   newTitle: Painting A
   newAuthor: Unknown
   newDesc: This is a test painting
+--- !u!114 &855550453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855550447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e95f4ad8fe5b4a699b058d8c2b358df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://gateway.pinata.cloud/ipfs/QmbyCwS6DrMddW9r3RRRcRZrKKtVGQzKJSVE6bPw75371a
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
