@@ -7,30 +7,27 @@ using Newtonsoft.Json;
 public class TestGetRequest : MonoBehaviour
 {
 
-    public Plane imagePlane;
-    private float progress;
-
+    public Renderer imageRenderer;
     public string url;
+    private Proximity proximity;
 
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(GetRequestCoroutine());
+        proximity = gameObject.GetComponent<Proximity>();
     }
 
     private IEnumerator GetRequestCoroutine()
     {
         UnityWebRequest www = UnityWebRequest.Get(url);
-        var asyncOperation = www.SendWebRequest();
+        yield return www.SendWebRequest();
 
         while(!www.isDone)
         {
-            progress = asyncOperation.progress;
-            yield return null;
+            Debug.Log("Fetching Metadata Under Progress");
         }
-
-        progress = 1f;
 
         if(!string.IsNullOrEmpty(www.error))
         {
@@ -39,21 +36,29 @@ public class TestGetRequest : MonoBehaviour
 
         var result = www.downloadHandler.text;
 
-        //var metadata = JsonUtility.FromJson<OpenSeaMetadata>(result);
         var metadata = JsonConvert.DeserializeObject<OpenSeaMetadata>(result);
 
-        //Debug.Log(metadata.attributes[0].trait_type);
+        proximity.newTitle = metadata.name;
+        proximity.newDesc = metadata.description;
 
-        //Debug.Log(result);
-        //Debug.Log(result.GetType());
-        //Debug.Log(openSeaMetadata.name);
-        Debug.Log(metadata.attributes[0].trait_type);
-        //Debug.Log(openSeaMetadata.image);
+        var imageUrl = metadata.image;
+        StartCoroutine(GetAndSetTexture(imageUrl));
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator GetAndSetTexture(string imageUrl)
     {
+        UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageUrl);
+        yield return www.SendWebRequest();
+
+        while(!www.isDone)
+        {
+            Debug.Log("Fetching Image Under Progress");
+        }
+
+        Texture myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+        imageRenderer.material.mainTexture = myTexture;
         
     }
+
 }
