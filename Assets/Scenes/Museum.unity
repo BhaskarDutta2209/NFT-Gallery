@@ -981,6 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e95f4ad8fe5b4a699b058d8c2b358df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageRenderer: {fileID: 855550449}
   url: https://gateway.pinata.cloud/ipfs/QmbyCwS6DrMddW9r3RRRcRZrKKtVGQzKJSVE6bPw75371a
 --- !u!1 &963194225
 GameObject:
@@ -1263,7 +1264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1559237096
 RectTransform:
   m_ObjectHideFlags: 0
