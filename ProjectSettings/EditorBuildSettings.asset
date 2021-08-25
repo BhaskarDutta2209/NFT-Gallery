@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Wallet Login.unity
+    guid: c941cacd3978342a8a42e773506bfc1c
+  - enabled: 1
+    path: Assets/Scenes/Museum.unity
+    guid: 7342f0980fc164ea18a3c05968b3f4a7
   m_configObjects: {}
