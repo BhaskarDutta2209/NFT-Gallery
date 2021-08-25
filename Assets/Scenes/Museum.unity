@@ -32,13 +32,13 @@ RenderSettings:
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.62363553, g: 0.6938766, b: 0.78748035, a: 1}
+  m_IndirectSpecularColor: {r: 0.34170085, g: 0.43319553, b: 0.5758271, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -70,7 +70,7 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
-    m_ReflectionCompression: 2
+    m_ReflectionCompression: 0
     m_MixedBakeMode: 2
     m_BakeBackend: 1
     m_PVRSampling: 1
@@ -744,6 +744,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: museum
       objectReference: {fileID: 0}
+    - target: {fileID: 2247043991967792796, guid: 8c08292520848469094a81aa5ffebfbe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.309
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c08292520848469094a81aa5ffebfbe, type: 3}
 --- !u!1 &705507993
@@ -770,7 +775,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -981,6 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e95f4ad8fe5b4a699b058d8c2b358df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageRenderer: {fileID: 855550449}
   url: https://gateway.pinata.cloud/ipfs/QmbyCwS6DrMddW9r3RRRcRZrKKtVGQzKJSVE6bPw75371a
 --- !u!1 &963194225
 GameObject:
@@ -1263,7 +1269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1559237096
 RectTransform:
   m_ObjectHideFlags: 0

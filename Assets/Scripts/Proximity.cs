@@ -11,7 +11,7 @@ public class Proximity : MonoBehaviour
     public string newDesc;
     private Transform other;
     private TMP_Text myTitle;
-    private TMP_Text myAuthor;
+    //private TMP_Text myAuthor;
     private TMP_Text myDesc;
     private float dist;
     private GameObject player;
@@ -30,8 +30,8 @@ public class Proximity : MonoBehaviour
         message3 = GameObject.FindWithTag("Description");
         myTitle = message1.GetComponent<TMP_Text>();
         myTitle.text = "";
-        myAuthor = message2.GetComponent<TMP_Text>();
-        myAuthor.text = "";
+        //myAuthor = message2.GetComponent<TMP_Text>();
+        //myAuthor.text = "";
         myDesc = message3.GetComponent<TMP_Text>();
         myDesc.text = "";
         check = false;
@@ -46,7 +46,7 @@ public class Proximity : MonoBehaviour
             if (dist < 4)
             {
                 myTitle.text = newTitle;
-                myAuthor.text = newAuthor;
+                //myAuthor.text = newAuthor;
                 myDesc.text = newDesc;
                 check = true;
             }
