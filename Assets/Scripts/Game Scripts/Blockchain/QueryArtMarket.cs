@@ -79,7 +79,7 @@ public class QueryArtMarket : MonoBehaviour
     }
 
     // Function to get all present Market Items
-    public async Task<List<MarketItemDTO>> getAllMarketItems()
+    public async Task<List<MarketItemDTO>> GetAllMarketItems()
     {
         List<MarketItemDTO> allMarketItems = new List<MarketItemDTO>();
 

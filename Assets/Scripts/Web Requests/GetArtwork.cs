@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
 
-public class TestGetRequest : MonoBehaviour
+public class GetArtwork : MonoBehaviour
 {
 
     public Renderer imageRenderer;
@@ -15,13 +15,20 @@ public class TestGetRequest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GetRequestCoroutine());
-        proximity = gameObject.GetComponent<Proximity>();
+        //StartCoroutine(GetArtworkDetails(url));
+        //proximity = gameObject.GetComponent<Proximity>();
     }
 
-    private IEnumerator GetRequestCoroutine()
+    public IEnumerator GetArtworkDetails(string URI)
     {
-        UnityWebRequest www = UnityWebRequest.Get(url);
+        proximity = gameObject.GetComponent<Proximity>();
+        StartCoroutine(GetRequestCoroutine(URI));
+        yield return 0;
+    }
+
+    private IEnumerator GetRequestCoroutine(string uri)
+    {
+        UnityWebRequest www = UnityWebRequest.Get(uri);
         yield return www.SendWebRequest();
 
         while(!www.isDone)
@@ -48,6 +55,8 @@ public class TestGetRequest : MonoBehaviour
 
     private IEnumerator GetAndSetTexture(string imageUrl)
     {
+        Debug.Log("TESTWORKING");
+
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageUrl);
         yield return www.SendWebRequest();
 

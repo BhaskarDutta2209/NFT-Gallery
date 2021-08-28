@@ -10,7 +10,7 @@ public class Test : MonoBehaviour
         QueryArtMarket queryArtMarket = new QueryArtMarket();
         var res = await queryArtMarket.GetItemCounter();
         Debug.Log(res);
-        var res2 = await queryArtMarket.getAllMarketItems();
+        var res2 = await queryArtMarket.GetAllMarketItems();
         Debug.Log(res2[0].nftContractAddress);
     }
 
